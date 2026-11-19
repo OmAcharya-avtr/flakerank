@@ -1,0 +1,16 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "FlakeRank"
+abstract: ""Ranks intermittently failing tests by the COST of their intermittency, expected wasted re-run time, rather than by flake rate, with the headline output being how far the two rankings disagree. Baseline 1 ranking by flake rate, implemented deliberately as the thing being refuted because it is what every CI dashboard does and it systematically underweights a rare failure in a slow test; baseline 2 an analytic expected-rerun-cost model from the measured per-test failure probability and runtime, with the geometric re-run count in closed form; baseline 3 ground truth directly accumulated wasted time over a long recorded run history with bootstrap confidence intervals. Learned intermittency predictor over test features, with a confidence output, scored on held-out TESTS and held-out TIME separately. Motivated by a failure this mission actually shipped: a 1-in-44 intermittent self-inflicted failure in a validation probe that any number of agreeing serial verifications was blind to. WHAT IT DOES THAT EXISTING TOOLS DO NOT: flaky-test detectors report a rate and a first-seen date; none of them puts a cost interval on the rate, so none of them can say which flake is worth fixing first.""
+type: software
+authors:
+  - family-names: "Acharya"
+    given-names: "Om"
+    alias: "OmAcharya-avtr"
+repository-code: "https://github.com/OmAcharya-avtr/flakerank"
+license: "Apache-2.0"
+version: "0.1.0"
+date-released: "2026-08-30"
+keywords:
+  - aerospace
+  - testing
